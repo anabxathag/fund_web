@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flow-root;
+            /*flowroot -> use for not let object out of border*/
+        }
+
+        .title {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .sidebar{
+            float: left;
+            margin-right: 10px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-column {
+            flex: 2; /* กำหนดคอลัมน์ทางซ้ายเพิ่มขึ้น */
+        }
+          
+        .right-column {
+            flex: 1; /* คอลัมน์ทางขวา */
+        }
+
+        .column {
+            width: calc(50% - 20px);
+            padding: 10px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+        }
+        
+        img {
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #dcdeb9;
+        }
+
+        li {
+            display: block;
+            width: 60px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* เปลี่ยนเมนูด้านข้างเป็นเมนูด้านบนเมื่อขนาดจอเล็กกว่า 620px */
+        @media screen and (max-width: 620px) {
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: #dcdeb9;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .left-column {
+                width: 100%;
+                flex: none;
+            }
+            .right-column {
+                width: 100%;
+                flex: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="title">
+            <h1>Hello Web Developer</h1>
+        </div>
+    </header>
+    
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="column left-column">
+            <h1>Web developer</h1>
+            <p>A web developer is a programmer who specializes in,
+                or is specifically engaged in, the development of 
+                World Wide Web applications using a client-sever model.
+                The applications typically use HTML, CSS and JavaScript
+                in the client, PHP, ASP.NET (C#), Python or Java in the client-sever,
+                and http for communications between client and sever. A web content
+                management system is often used to develop and maintain web applications.
+            </p>
+        </div>
+        <div class="column right-column">
+            <img src="https://res.cloudinary.com/techupth/image/upload/v1665131307/techupth/blog-posts/2204-web-developer_ahhbdn.jpg" alt="#">
+        </div>
+    </div>
+
+    <footer>
+        <p>Who are U!?</p>
+    </footer>  
+</body>
+</html>

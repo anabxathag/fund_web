@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2_Kor4</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            }
+        .column {
+            float: left;
+            padding: 10px;
+            height: 300px;
+        }
+        .left {
+            width: 50%;
+        }
+        .right {
+            width: 50%;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        table, tr, td, th {
+            border-collapse: collapse;
+            border: 1px solid #0d0d0d;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left">
+            <table style="width: 60%; height: 80%">
+                <tr align="center">
+                    <th>ลำดับ</th>
+                    <th>ชื่อ</th>
+                    <th>คะแนน</th>
+                </tr>
+                <tr align="left">
+                    <td>1</td>
+                    <td>J. Depp</td>
+                    <td>60</td>
+                </tr>
+                <tr align="left">
+                    <td>2</td>
+                    <td>D. Washington</td>
+                    <td>90</td>
+                </tr>
+                <tr align="left">
+                    <td>3</td>
+                    <td>B. Pitt</td>
+                    <td>50</td>
+                </tr>
+                <tr align="left">
+                    <td>4</td>
+                    <td>R. Crowe</td>
+                    <td>80</td>
+                </tr>
+                <tr align="left">
+                    <td>5</td>
+                    <td>T. Cruise</td>
+                    <td>75</td>
+                </tr>
+            </table>
+        </div>
+        <div class="column right">
+            <h2><div style="background-color:tomato; 
+            width: 60%">J. Depp</div></h2>
+
+            <h2><div style="background-color:rgb(23, 19, 227); 
+            width: 90%">D. Washington</div></h2>
+
+            <h2><div style="background-color:rgb(29, 183, 70); 
+            width: 50%">B. Pitt</div></h2>
+
+            <h2><div style="background-color:rgb(151, 151, 149); 
+            width: 80%">R. Crowe</div></h2>
+
+            <h2><div style="background-color:rgb(133, 168, 10); 
+            width: 75%">T. Cruise</div></h2>
+
+        </div>
+    </div>
+    
+</body>
+</html>

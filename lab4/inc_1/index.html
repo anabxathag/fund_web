@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4 DOM ex1</title>
+</head>
+<body>
+    <p id="p1">This is paragraph</p>
+    <ol>
+        <li>A</li>
+        <li>B</li>
+    </ol>
+
+    <!--
+    สร้าง Element node ที่เหมือนกับ Element Tag นี้
+    <p>This is a new node</p>
+    -->
+    <p>This is a new node</p>
+    
+    <script>
+        // เขียน code ไปพร้อมกัน ^__^ 
+
+        // สร้าง list
+        // 1.Sunday
+        // 2.Monday
+        // ........
+
+        /*
+        สร้าง list ที่ เป็นรายชื่อวันในสัปดาห์ 
+        <ol>
+        <li></li>
+        </ol>
+        */
+
+        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        
+        let ol1 = document.createElement("ol"); // <ol></ol>
+        
+        for (let d in days) {
+            let li1 = document.createElement("li"); // <li></li>
+            let text1 = document.createTextNode(days[d]);
+            li1.appendChild(text1); // <li>Sunday</li>
+            ol1.appendChild(li1); // <ol><li>Sunday</li></ol>
+        };
+
+        document.body.appendChild(ol1);
+    </script>
+</body>
+</html>

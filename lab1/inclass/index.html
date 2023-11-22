@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            }
+        /* Create two unequal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .left {
+            width: 50%;
+            background-color: #32e7bd;
+        }
+
+        .right {
+            width: 50%;
+            background-color: #d12121;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>อินเดียยยยยย</h1>
+    <h3>แกงกาลี</h3>
+</body>
+<div class="row">
+    <div class="column left">
+        <h2>Gloria Gonzalez</h2>
+        <p>3204 Windover Way
+            Houston, TX 77204<br>
+            ggonzalez@email.com
+            1000.123.4567</p>
+    </div>
+    <div class="column right">
+        <img src="http://10.0.15.21/lab1/gloria.jpg" width="150">
+    </div>
+</div>
+
+</html>

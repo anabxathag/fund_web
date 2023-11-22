@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image1" src="http://10.0.15.21/lab3/images/lisa1.jpg" width="300"> 
+    <img id="image2" src="http://10.0.15.21/lab3/images/lisa2.jpg" width="300"> <br> 
+    <button onclick="changesrc()">Change</button>
+
+    <script>
+        function changesrc() {
+             document.getElementById('image1').src = "http://10.0.15.21/lab3/images/lisa2.jpg";
+             document.getElementById('image2').src = "http://10.0.15.21/lab3/images/lisa1.jpg";
+        }        
+    </script>
+</body>
+</html>

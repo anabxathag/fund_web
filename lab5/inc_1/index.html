@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wk5 inclass1</title>
+</head>
+<body>
+    <p id="out"></p>
+    <p id="out2"></p>
+
+    <script>
+    let myObj = {
+        "firstname":"John",
+        "lastname":"Doe",
+        "age":30,
+        "cars":[ "Ford", "BMW", "Fiat" ]
+    };
+    let txt = '';
+
+    document.getElementById("out").innerHTML = 
+        myObj.firstname + '<br>' +
+        myObj.lastname + '<br>' + myObj.age;
+
+    for (let i = 0; i < myObj.cars.length; i++) {
+        txt += myObj.cars[i] + ' ';
+    }
+    document.getElementById("out2").innerHTML = txt;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change lang</title>
+    <style>
+        body {
+            margin-left: 40%;
+            margin-top: 3%;
+        }
+        label {
+            font-style: italic;
+            font-weight: bold;
+        }
+        input, select {
+            border-radius: 7px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <label for="name">ชื่อ: </label>
+    <input type="text" id="name" required>
+    <br>
+
+    <label for="surname">นามสกุล: </label>
+    <input type="text" id="surname" required>
+    <br>
+
+    <label for="country">ประเทศ: </label>
+        <select name="country" id="country">
+            <option value="-" selected>เลือกประเทศ</option>
+            <option value="thai">ไทย</option>
+            <option value="vietnam">เวียดนาม</option>
+            <option value="lao">ลาว</option>
+            <option value="maleysia">มาเลย์เซีย</option>
+            <option value="singapor">สิงคโปร์</option>
+            <option value="philipen">ฟิลิปปินส์</option>
+            <option value="meymar">เมียนมาร์</option>
+            <option value="kumpucha">กัมพูชา</option>
+            <option value="brunai">บรูไน</option>
+        </select>
+    <br><br>
+
+    <button onclick="changeLang()" id="changeLang">เปลี่ยนเป็นอังกฤษ</button>
+    <script src="scip_2.js"></script>
+</body>
+</html>

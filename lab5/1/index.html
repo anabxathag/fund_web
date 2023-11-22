@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table json</title>
+</head>
+<body>
+    <p id="out"></p>
+    
+    <script>
+        let requestURL = 'employ.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                dataReportStatus(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function dataReportStatus(data) {
+            let text = '';
+
+            for (let i = 0; i < data.length; i++) {
+                text += data[i].ID + ' '
+                    + '<b>' + data[i].Firstname
+                    + ' ' + data[i].Lastname + '</b>' 
+                    + ' (' + data[i].Gender + ') is a '
+                    + data[i].Position + ', '
+                    + data[i].Address + '<br>'
+            }
+
+            document.getElementById("out").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

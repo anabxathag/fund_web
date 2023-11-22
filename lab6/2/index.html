@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>col 2x2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Query for screens with width less than 600px */
+        @media screen and (max-width: 600px) {
+            .row {
+                flex-direction: column;
+            }
+            .col  {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>43 Curry
+            VARIETIES
+            Ranked From the Worst To the Best</h1>
+        <p>TasteAtlas food rankings are based on the ratings of the TasteAtlas audience, 
+            with a series of mechanisms that recognize real users and that ignore bot, 
+            nationalist or local patriotic ratings, and give additional value to 
+            the ratings of users that the system recognizes as knowledgeable. 
+            For the “43 Curry Varieties Ranked From the Worst To the Best” 
+            list until August 22, 2023, 350,650 ratings were recorded, of which 238,326 
+            were recognized by the system as legitimate. TasteAtlas Rankings should not be 
+            seen as the final global conclusion about food. Their purpose is to promote 
+            excellent local foods, instill pride in traditional dishes, and arouse 
+            curiosity about dishes you haven't tried.</p>
+    
+        <div class="row">
+            <div class="col">
+                <img src="https://cdn.tasteatlas.com//Images/Dishes/a0d80bf83b6c49e5841dedd8f9e02faa.jpg?w=905&h=510" 
+                alt="Phanaeng Curry">
+                <i>Phanaeng Curry</i><br>
+
+                <img src="https://cdn.tasteatlas.com//Images/Dishes/e0335282a16644079d6de02902a8b4e9.jpg?w=905&h=510" 
+                alt="Khao Soi">
+                <i>Khao Soi</i>
+            </div>
+
+            <div class="col">
+                <img src="https://cdn.tasteatlas.com//images/dishes/713e5f01cbb2463386be9bc57c037639.jpg?w=905&h=510" 
+                alt="Butter chicken">
+                <i>Butter chicken</i><br>
+
+                <img src="https://cdn.tasteatlas.com//images/dishes/04159690147843cd861ad2afffdeed59.jpg?w=905&h=510" 
+                alt="Kare">
+                <i>Kare</i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

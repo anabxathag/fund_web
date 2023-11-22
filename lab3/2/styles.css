@@ -1,0 +1,21 @@
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+.down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 23vh;
+}
+.button {
+  padding: 5px 10px;
+  font-size: 40px;
+  background-color: #ef1c77;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+

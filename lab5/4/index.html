@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local sto address</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <form id="myForm">
+            <div class="w-25">
+                <label for="id_card" class="form-label">หมายเลขบัตรประชาชน: </label>
+                <input type="text" class="form-control" id="id_card" 
+                name="id-card" placeholder="1100703578408" maxlength="13" required>
+            </div>
+
+            <br>
+            <div>
+                <label for="prefix" class="col-form-label">คำนำหน้าชื่อ: </label>
+                <div class="w-50">
+                    <select id="prefix" name="prefix" class="form-control">
+                        <option value="-" selected>--------------- เลือกคำนำหน้าชื่อ ---------------</option>
+                        <option value="นาย">นาย</option>
+                        <option value="นาง">นาง</option>
+                        <option value="นางสาว">นางสาว</option>
+                        <option value="เด็กชาย">เด็กชาย</option>
+                        <option value="เด็กหญิง">เด็กหญิง</option>
+                    </select>
+                </div>
+                
+            </div>
+    
+            <br>
+            <div class="w-25">
+                <label for="fname" class="form-label">ชื่อ: </label>
+                <input type="text" class="form-control" id="fname" name="fname" 
+                placeholder="Nattawat" minlength="3" maxlength="19" required>
+            </div>
+            
+
+            <br>
+            <div class="w-25">
+                <label for="lname" class="col-form-label">นามสกุล: </label>
+                <input type="text" class="form-control" id="lname" name="lname" 
+                placeholder="Weradechtaweewon" minlength="3" maxlength="29" required>
+            </div>
+
+            <br>
+            <div class="w-50">
+                <label for="tiu" class="col-form-label">ที่อยู่: </label>
+                <textarea type="text" class="form-control" id="tiu" name="tiu" 
+                minlength="15" required></textarea>
+            </div>
+
+            <br>
+            <div class="w-25">
+                <label for="kwang" class="col-form-label">ตำบล/แขวง: </label>
+                <input type="text" class="form-control" id="kwang" name="kwang" 
+                placeholder="วัดพระยาไกร" minlength="2" required>
+            </div>
+
+            <br>
+            <div class="w-25">
+                <label for="khet" class="col-form-label">อำเภอ/เขต: </label>
+                <input type="text" class="form-control" id="khet" 
+                name="khet" placeholder="บางคอแหลม" minlength="2" required>
+            </div>
+
+            <br>
+            <div>
+                <label for="city" class="col-form-label">จังหวัด: </label>
+                <div class="w-50">
+                    <select id="city" class="form-control" name="city">
+                        <option value="-" selected>------------------ เลือกจังหวัด ------------------</option>
+                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                        <option value="กระบี่">กระบี่ </option>
+                        <option value="กาญจนบุรี">กาญจนบุรี </option>
+                        <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                        <option value="กำแพงเพชร">กำแพงเพชร </option>
+                        <option value="ขอนแก่น">ขอนแก่น</option>
+                        <option value="จันทบุรี">จันทบุรี</option>
+                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                        <option value="ชัยนาท">ชัยนาท </option>
+                        <option value="ชัยภูมิ">ชัยภูมิ </option>
+                        <option value="ชุมพร">ชุมพร </option>
+                        <option value="ชลบุรี">ชลบุรี </option>
+                        <option value="เชียงใหม่">เชียงใหม่ </option>
+                        <option value="เชียงราย">เชียงราย </option>
+                        <option value="ตรัง">ตรัง </option>
+                        <option value="ตราด">ตราด </option>
+                        <option value="ตาก">ตาก </option>
+                        <option value="นครนายก">นครนายก </option>
+                        <option value="นครปฐม">นครปฐม </option>
+                        <option value="นครพนม">นครพนม </option>
+                        <option value="นครราชสีมา">นครราชสีมา </option>
+                        <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                        <option value="นครสวรรค์">นครสวรรค์ </option>
+                        <option value="นราธิวาส">นราธิวาส </option>
+                        <option value="น่าน">น่าน </option>
+                        <option value="นนทบุรี">นนทบุรี </option>
+                        <option value="บึงกาฬ">บึงกาฬ</option>
+                        <option value="บุรีรัมย์">บุรีรัมย์</option>
+                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                        <option value="ปทุมธานี">ปทุมธานี </option>
+                        <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                        <option value="ปัตตานี">ปัตตานี </option>
+                        <option value="พะเยา">พะเยา </option>
+                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                        <option value="พังงา">พังงา </option>
+                        <option value="พิจิตร">พิจิตร </option>
+                        <option value="พิษณุโลก">พิษณุโลก </option>
+                        <option value="เพชรบุรี">เพชรบุรี </option>
+                        <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                        <option value="แพร่">แพร่ </option>
+                        <option value="พัทลุง">พัทลุง </option>
+                        <option value="ภูเก็ต">ภูเก็ต </option>
+                        <option value="มหาสารคาม">มหาสารคาม </option>
+                        <option value="มุกดาหาร">มุกดาหาร </option>
+                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                        <option value="ยโสธร">ยโสธร </option>
+                        <option value="ยะลา">ยะลา </option>
+                        <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                        <option value="ระนอง">ระนอง </option>
+                        <option value="ระยอง">ระยอง </option>
+                        <option value="ราชบุรี">ราชบุรี</option>
+                        <option value="ลพบุรี">ลพบุรี </option>
+                        <option value="ลำปาง">ลำปาง </option>
+                        <option value="ลำพูน">ลำพูน </option>
+                        <option value="เลย">เลย </option>
+                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                        <option value="สกลนคร">สกลนคร</option>
+                        <option value="สงขลา">สงขลา </option>
+                        <option value="สมุทรสาคร">สมุทรสาคร </option>
+                        <option value="สมุทรปราการ">สมุทรปราการ </option>
+                        <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                        <option value="สระแก้ว">สระแก้ว </option>
+                        <option value="สระบุรี">สระบุรี </option>
+                        <option value="สิงห์บุรี">สิงห์บุรี </option>
+                        <option value="สุโขทัย">สุโขทัย </option>
+                        <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                        <option value="สุรินทร์">สุรินทร์ </option>
+                        <option value="สตูล">สตูล </option>
+                        <option value="หนองคาย">หนองคาย </option>
+                        <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                        <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                        <option value="อุดรธานี">อุดรธานี </option>
+                        <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                        <option value="อุทัยธานี">อุทัยธานี </option>
+                        <option value="อุบลราชธานี">อุบลราชธานี</option>
+                        <option value="อ่างทอง">อ่างทอง </option>
+                    </select>
+                </div>
+                </div>
+
+            <br>
+            <div class="w-25">
+                <label for="zip_code" class="col-form-label">รหัสไปรษณีย์: </label>
+                <input type="text" class="form-control" id="zip_code" 
+                name="zip_code" placeholder="10120" minlength="5" maxlength="5" required>
+            </div>
+
+            <br>
+            <div>
+                <button onclick="SaveDatInForm()">Save data</button>
+                <button onclick="showLocalData()">Show data</button>
+            </div>
+        </form>
+    </div><br>
+
+    <div class="container">
+        <h4 id="output"></h4>
+    </div>
+
+    <script>
+        function SaveDatInForm() {
+            let id_card = document.forms.myForm.id_card.value;
+            let prefix = document.forms.myForm.prefix.value;
+            let fname = document.forms.myForm.fname.value;
+            let lname = document.forms.myForm.lname.value;
+            let tiu = document.forms.myForm.tiu.value;
+            let kwang = document.forms.myForm.kwang.value;
+            let khet = document.forms.myForm.khet.value;
+            let city = document.forms.myForm.city.value;
+            let zip_code = document.forms.myForm.zip_code.value;
+            // save data to local storage
+            localStorage.setItem('userIdCard', id_card);
+            localStorage.setItem('userPrefix', prefix);
+            localStorage.setItem('userFirstName', fname);
+            localStorage.setItem('userLastName', lname);
+            localStorage.setItem('useraddress', tiu);
+            localStorage.setItem('userKwang', kwang);
+            localStorage.setItem('userKhet', khet);
+            localStorage.setItem('userCity', city);
+            localStorage.setItem('userZipCode', zip_code);
+            alert("Data saved");
+        }
+        function showLocalData() {
+            // load data from local storage
+            let idc = localStorage.getItem('userIdCard');
+            let pf = localStorage.getItem('userPrefix');
+            let fn = localStorage.getItem('userFirstName');
+            let ln = localStorage.getItem('userLastName');
+            let ad = localStorage.getItem('useraddress');
+            let kw = localStorage.getItem('userKwang');
+            let kh = localStorage.getItem('userKhet');
+            let ct = localStorage.getItem('userCity');
+            let zc = localStorage.getItem('userZipCode');
+
+            let listo = document.getElementById("output");
+            listo.innerHTML = '<br>' + idc + '<br>'
+                + pf + ' ' + fn + ' ' + ln  + '<br>'
+                + ad + '<br>' + kw + ' ' + kh + ' ' +  ct
+                + '<br>' + zc;
+        }
+    </script>
+    
+</body>
+</html>

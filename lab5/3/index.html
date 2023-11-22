@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Europe History</title>
+    <style>
+        #out {
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz 1</h1>
+    <div id="out"></div>
+
+    <script>
+        let requestURL = 'questionAnswerData.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                dataReportStatus(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function dataReportStatus(data) {
+            let kor = '';
+            for (let i = 0; i < data.length; i++) {
+
+                let choice = '';
+                for (let j in data[i].answers) {
+                    if (j !== 'correct') {
+                        choice += `
+                            <label>
+                                <input type="radio" name="${i+1}" value="${j}" 
+                                ${data[i].answers.correct === j ? 'checked' : ''}>
+                                ${data[i].answers[j]}
+                            </label><br>
+                        `;
+                    }
+                }
+
+                kor += `<p>${i + 1}) ${data[i].question} <br> ${choice}</p>`;
+            };
+            document.getElementById('out').innerHTML = kor;
+        }
+    </script>
+    
+</body>
+</html>

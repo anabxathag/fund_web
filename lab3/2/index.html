@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rotator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="up">
+        <img id="le_up" src="http://10.0.15.21/lab3/images/1.png" alt="1">
+    
+        <img id="ri_up" src="http://10.0.15.21/lab3/images/2.png" alt="2">
+    </div>
+    
+    <div class="down">
+        <img id="le_do" src="http://10.0.15.21/lab3/images/3.png" alt="3">
+    
+        <img id="ri_do" src="http://10.0.15.21/lab3/images/4.png" alt="4">
+    </div>
+
+    <br>
+    <center>
+        <button class="button" onclick="changeposi()">Rotate</button>
+    </center>
+    
+    <script>
+        let pp1 = "http://10.0.15.21/lab3/images/1.png";
+        let pp2 = "http://10.0.15.21/lab3/images/2.png";
+        let pp3 = "http://10.0.15.21/lab3/images/3.png";
+        let pp4 = "http://10.0.15.21/lab3/images/4.png";
+        const images = [pp1, pp2, pp4, pp3];
+        const posi = ['le_up', 'ri_up', 'ri_do', 'le_do'];
+
+        function changeposi() {
+            images.unshift(images.pop());
+            for (let i=0; i < posi.length; i++) {
+                document.getElementById(posi[i]).src = images[i];
+            }
+        }
+    </script>
+    
+</body>
+</html>
